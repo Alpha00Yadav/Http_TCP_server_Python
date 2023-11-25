@@ -61,12 +61,3 @@ class HTTP(TCP):
 				i=c.split("=")
 				d["query"][i[0]]=i[1]
 		return d	
-x=HTTP("127.0.0.1",8000)
-while True:
-	c=open("C:\\Users\\Aditya\\Pictures\\asp.png",'rb')
-	reply=c.read()
-	#reply=b'Socket.py'
-	request=x.exchange(reply)
-	print(request)
-	x.exclose()
-x.close()
